@@ -1,0 +1,116 @@
+<style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+    body{
+      background:#020617;
+      color:#e2e8f0;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background: radial-gradient(circle at center, #0f172a, #020617);
+      padding:20px;
+    }
+
+    .profile-img{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #38bdf8;
+      box-shadow:0 0 30px rgba(56,189,248,0.6);
+      margin-bottom:20px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    h1{
+      font-size:32px;
+      font-weight:700;
+    }
+
+    .typing{
+      color:#38bdf8;
+      margin-top:10px;
+      font-size:18px;
+    }
+
+    .cta{
+      margin-top:25px;
+      padding:12px 20px;
+      background:#38bdf8;
+      color:#020617;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .cta:hover{
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:60px 20px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#38bdf8;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#0f172a;
+      padding:20px;
+      border-radius:16px;
+      transition:0.3s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+      opacity:0;
+      transition:0.5s;
+    }
+
+    .card:hover::before{
+      opacity:0.1;
+    }
+
+    .card:hover{
+      transform:translateY(-8px) scale(1.02);
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#64748b;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+
+    @media(max-width:600px){
+      h1{font-size:24px}
+    }
+  </style>

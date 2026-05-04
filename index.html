@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Pratama I - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <div class="hero">
+    <img src="https://i.imgur.com/g8u3gOt.jpeg" class="profile-img">
+    <h1>Joshua Pratama I</h1>
+    <div class="typing" id="typing"></div>
+    <a href="#about" class="cta">Explore My Work</a>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>IT Staff dengan pengalaman troubleshooting, networking, dan maintenance sistem. Suka belajar hal baru dan tertarik berkembang ke dunia enterprise & web development.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>IT Staff</h3>
+        <p>Maintain sistem, jaringan, dan support teknis perusahaan.</p>
+      </div>
+      <div class="card">
+        <h3>IT Support</h3>
+        <p>Support user, konfigurasi jaringan, monitoring server.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">Troubleshooting</div>
+      <div class="card">Networking</div>
+      <div class="card">System Setup</div>
+      <div class="card">Web Basics</div>
+      <div class="card">English (Intermediate)</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Joshua Pratama
+  </footer>
+
+  <script>
+    const text = ["IT Staff","Problem Solver","Tech Enthusiast"];
+    let i=0, j=0, current="", isDeleting=false;
+
+    function type(){
+      current = text[i];
+      if(isDeleting){
+        document.getElementById("typing").textContent = current.substring(0,j--);
+        if(j<0){isDeleting=false;i=(i+1)%text.length}
+      } else {
+        document.getElementById("typing").textContent = current.substring(0,j++);
+        if(j>current.length){isDeleting=true}
+      }
+      setTimeout(type, isDeleting?50:100);
+    }
+
+    type();
+  </script>
+
+</body>
+</html>
